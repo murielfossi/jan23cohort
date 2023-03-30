@@ -5,7 +5,6 @@ public class TestIceCreamParlor {
         IceCreamParlor HoneyBeePlace = new IceCreamParlor();
         IceCreamParlor DanasPlace = new IceCreamParlor();
 
-
         HoneyBeePlace.sellIceCream();
         HoneyBeePlace.createArrayList();
         DanasPlace.createArrayList();
@@ -16,3 +15,5 @@ public class TestIceCreamParlor {
         DanasPlace.orderIceCream("Chocolate");
     }
 }
+
+

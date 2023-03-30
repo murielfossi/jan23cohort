@@ -9,20 +9,20 @@
 </head>
 <body>
 	<header>
-		<h1>Hello</h1>
+		<h1>Hello, ${name}</h1>
 	</header>
 	
 	<main>
-	   <h1> ${name} </h1>
-	    <h1> <c:out value="${flavor}"/> </h1>
+	   
+	    <h3>your IceCream flavor is: </h3> <c:out value="${flavor}"/> 
 	    
 	    <ul>
-	      <c:forEach var="loc" items="${ allCities }">
+	      <h3> your favorite destinations are:</h3> <c:forEach var="loc" items="${ allCities }">
 	         <li>${ loc } </li>
 	      </c:forEach>
 	    </ul>
 	    
-	    <h1><c:out value="${name}"/></h1>
+	    <h1> Thank you <c:out value="${name}"/> for your visit</h1>
 	
 	</main>
 </body>
