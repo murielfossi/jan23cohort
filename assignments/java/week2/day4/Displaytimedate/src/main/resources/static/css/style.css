@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+
+.One{
+	border:10px solid red ;
+	align-items: center ;
+	display: flex ;
+	justify-content:space-around;
+	padding:20px;
+	margin-top:150px;
+	width:500px;
+	margin-left:500px;
+	background-color:#d5e1df;
+	
+	
+}
+body{
+	background-color: #92a8d1;
+	
+	
+}
+.two{
+	text-align: center ;
+}
+.three{
+	align-items: center ;
+}

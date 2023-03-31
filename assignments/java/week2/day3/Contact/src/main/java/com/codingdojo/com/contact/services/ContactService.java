@@ -30,11 +30,17 @@ public class ContactService {
 	//==========
 	
 	
+	
+	
 	//CREATE
 	
 	//FIND ALL
 	
      public List<ContactModel> allContact(){
     	 return contactRepo.findAll();
+     }
+     
+     public ContactModel createContact(ContactModel c) {
+    	 return contactRepo.save(c);
      }
 }

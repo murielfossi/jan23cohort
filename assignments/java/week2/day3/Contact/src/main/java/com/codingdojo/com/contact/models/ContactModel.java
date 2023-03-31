@@ -48,6 +48,9 @@ public class ContactModel {
 	@DateTimeFormat(pattern="yyy-MM-dd")
 	private Date updatedAt;
 	
+	//prepersist andupdate 
+	
+	
 	
 	@PrePersist
 	protected void onCreate() {

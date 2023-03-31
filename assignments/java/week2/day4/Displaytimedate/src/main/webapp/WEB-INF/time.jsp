@@ -4,26 +4,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
 <!-- for Bootstrap CSS -->
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 <!-- YOUR own local CSS -->
 <link rel="stylesheet" href="/css/main.css"/>
 <!-- For any Bootstrap that uses JS -->
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+<title>Daikichi</title>
 </head>
-<body>
-	<header>
-		<h1>Hello</h1>
+<body class="three">
+	<header >
+		<h1><p> <c:out value="${striTime}"/></p></h1>
 	</header>
-	<main>
-	<h4>Here is the number of time me, <c:out value="${OwnerName}"/> the owner of this Website will offer you a trip</h4>
-	 <% for(int i = 0; i < 5; i++) { %>
-        <h1><%= i %></h1>
-    <% } %>
- 
 	
-	</main>
 </body>
 </html>
