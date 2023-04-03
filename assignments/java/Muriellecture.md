@@ -14,3 +14,9 @@ https://codepen.io/WolfsVeteran/pen/wvjxbJb for (frontend project)
 
 to generate my constructor on spring tolls , in my model right click on the class, go to source and click on generate constructor using field
 to generate my getter and setter , in my model, right click on the class  name, go to source and click on generate getters and setters
+
+This go to the index.jsp file in bootstrap
+
+<c:forEach var="person" items="${people}">
+    <c:out value="${person.name}"/>
+</c:forEach>

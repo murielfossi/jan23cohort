@@ -13,9 +13,9 @@
 <meta charset="UTF-8">
 <title>Daikichi</title>
 </head>
-<body class="three">
+<body >
 	<header >
-		<h1><p> <c:out value="${striTime}"/></p></h1>
+		<h1><c:out value="${striTime}"/></h1>
 	</header>
 	
 </body>

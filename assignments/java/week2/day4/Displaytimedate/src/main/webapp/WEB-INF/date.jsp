@@ -13,10 +13,10 @@
 <meta charset="UTF-8">
 <title>Date</title>
 </head>
-<body class="two">
+<body >
 	<header >
 	<!-- <h1><p>The time is: <%= new Date() %></p></h1>  this one one work too but i want a formatting one display only the date. here is the util for this code import="java.util.Date"-->
-	<h1><p> <c:out value="${striDate}"/></p></h1>
+	<h1> <c:out value="${striDate}"/></h1>
 		
 	</header>
 </body>
