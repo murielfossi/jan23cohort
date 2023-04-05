@@ -20,3 +20,17 @@ This go to the index.jsp file in bootstrap
 <c:forEach var="person" items="${people}">
     <c:out value="${person.name}"/>
 </c:forEach>
+
+
+
+@NotNull, @NotEmpty, and @NotBlank are all annotations used in Java to apply constraints on method parameters, fields, and return values. They are used to ensure that certain values meet certain requirements and to catch potential errors at compile time. Here's a brief overview of each of them:
+
+@NotNull: This annotation is used to indicate that a parameter, field, or method return value cannot be null. If null is passed in as an argument or returned from a method, an exception will be thrown at runtime. @NotNull is part of the Bean Validation framework, which is widely used in Java applications.
+
+@NotEmpty: This annotation is used to indicate that a parameter, field, or method return value must not be empty. An empty string, collection, or array will cause an exception to be thrown at runtime. @NotEmpty is also part of the Bean Validation framework.
+
+@NotBlank: This annotation is used to indicate that a parameter, field, or method return value must not be null or consist entirely of whitespace. This is commonly used for validating user input in web applications, where leading or trailing spaces in a user's input could cause issues. @NotBlank is also part of the Bean Validation framework.
+
+It's worth noting that @NotEmpty and @NotBlank are not included in the standard Java library and must be imported separately. Additionally, @NotBlank is only applicable to strings, while @NotEmpty can be used for strings, collections, and arrays.
+[10:24 AM]
+from ChatGPT, looked it up after Lia explained a little more!
