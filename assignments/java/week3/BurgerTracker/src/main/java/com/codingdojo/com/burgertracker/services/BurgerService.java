@@ -17,13 +17,14 @@ public class BurgerService {
 	private BurgerRepository burgerRepo;
 	
 	
-    // ===============================================================
-    //         METHODS use the repository to talk to the database
-    // ===============================================================
+    // ===================================================================
+    //         METHODS .Service help our controller to talk to the database
+    // ==================================================================
 	
 	
 	
-	//Read
+	//Read has 2 main function , read all and read one,
+	
 		public List<BurgerModel> allBurgers() {
 			return burgerRepo.findAll();
 		}

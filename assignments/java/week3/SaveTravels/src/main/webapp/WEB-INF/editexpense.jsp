@@ -16,7 +16,7 @@
 <!-- For any Bootstrap that uses JS -->
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Edit Expense</title>
 </head>
 <body>
 
@@ -29,36 +29,37 @@
             <div class="col-12 col-md-8 col-lg-5 col-xl-5">
                <div class="my-md-5 pb-5">   
                
-               <h1 class="fw-bold mb-5">Edit a Burger:</h1>
+               <h1 class="fw-bold mb-5">Edit your Expense here:</h1>
 
 		
 		
-		<form:form action="/update/${burger.id}" method="post" modelAttribute="burgerEditForm" >
-		 <input type="hidden" name="_method" value="put"/>
+		<form:form action="/update/${expense.id}" method="post" modelAttribute="expenseEditForm" >
+		<input type="hidden" name="_method" value="put"/>
 		
-			<section class="form-outline mb-4">
-				<label for="burgerName">Burger Name: </label>
-				<input type="text" name="burgerName" id="" value="${burger.burgerName}" class="form-control form-control-lg"/>
-				<form:errors path="burgerName" class="text-warning"/>
+				<section class="form-outline mb-4">
+				<label for="expenseName">Expense Name: </label>
+				<input type="text" name="expenseName" id="" value="${expense.expenseName}" class="form-control form-control-lg"/>
+				<form:errors path="expenseName" class="text-warning"/>
 			</section >
 			<section class="form-outline mb-4">
-				<form:label path="restaurantName">Restaurant Name: </form:label>
-				<form:input path="restaurantName" type="text" value="${burger.restaurantName}" class="form-control form-control-lg"/>
-				<form:errors path="restaurantName" class="text-warning" />
+				<form:label path="vendor">vendor: </form:label>
+				<form:input path="vendor" type="text"  value="${expense.vendor}" class="form-control form-control-lg"/>
+				<form:errors path="vendor" class="text-warning" />
 			</section>
 			<section class="form-outline mb-4">
-				<form:label path="rating">Rating :</form:label>
-				<form:input path="rating" type="number" value="${burger.rating}" class="form-control form-control-lg"/>
-				<form:errors path="rating" class="text-warning" />
+				<form:label path="amount">amount :</form:label>
+				<form:input path="amount" type="decimal" value="${ expense.amount}" class="form-control form-control-lg"/>
+				<form:errors path="amount" class="text-warning" />
 			</section >
 			<section class="form-outline mb-4">
-				<form:label path="notes">Notes: </form:label>
-				<form:input path="notes" type="text" value="${burger.notes}" class="form-control form-control-lg"/>
-				<form:errors path="notes" class="text-warning" />
+				<form:label path="description">Description: </form:label>
+				<form:input path="description" type="text" value="${ expense.description}"  class="form-control form-control-lg"/>
+				<form:errors path="description" class="text-warning" />
 			</section>
 			<button class="btn btn-primary mt-3">Update</button>
 		</form:form><br><br>
 		
+		<button class="btn btn-outline-primary"><a href="/showexpense"> Go Back</a></button>
 		
 		  </div>
        </div>
