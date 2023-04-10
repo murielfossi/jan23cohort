@@ -19,26 +19,30 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="top-container">
-		<h1>Burger Tracker</h1>
-		
-		<table class="table">
+			<h1>${ viewDojo.dojoName } Location Ninjas</h1>
+		<nav>
+			<a href="/">Home</a>
+			<a href="/displaydojo">Add Dojo</a>
+			<a href="/displayninja">Add Ninja</a>
+		</nav>
+	</header>
+    <main>
+    	<table>
 			<tr>
-				<th>Burger Name</th>
-				<th>Restaurant Name</th>
-				<th>Rating (out of 5)</th>
-				<th>Action</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Age</th>
 			</tr>
-			<c:forEach items="${allBurgers}" var="b">
-		        <tr>
-		            <td>${b.burgerName}</td>
-		            <td>${b.restaurantName}</td>
-		            <td>${b.rating}</td>
-		            <td><button class="btn btn-outline-primary"><a href="/edit/${b.id}">edit</a></button> | <span><button class="btn btn-outline-primary"><a href="/delete/${b.id}">delete</a></td></button></span></td>
-		         <!--  <td><p><a href="/edit/${b.id}">edit</a> | <a href="/delete/${b.id}">delete</a></p></td> this one work but i prefer the one with he button-->
-		        </tr>
-		    </c:forEach>
+			<c:forEach var="n" items="${viewDojo.ninjas}" >
+				<tr>
+					<td>${ n.firstName }</td>
+					<td> ${ n.lastName }</td>
+					<td>${ n.age }</td>
+				</tr>
+			</c:forEach>
 		</table>
+	
+    </main>
 	</div>
 </body>
 </html>
