@@ -58,7 +58,7 @@ public class RegisterLoginController {
            return "logReg.jsp";
        }
        session.setAttribute("user_id", newUser.getId());
-       return "redirect:/success";
+       return "reirect:/success";
    }
    
    // Login User Process

@@ -29,11 +29,11 @@
             <div class="col-12 col-md-8 col-lg-5 col-xl-5">
                <div class="my-md-5 pb-5">   
                
-               <h1 class="fw-bold mb-5">You successfully Login to this Website</h1>
+               <h1 class="fw-bold mb-5">you successfully login to this website</h1>
 
 		
 		
-		<a href="/logout">logout</a>
+		
 		
 		  </div>
        </div>

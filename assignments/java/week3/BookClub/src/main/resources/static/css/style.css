@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+
+h1 {
+    color: blue;
+    
+}
+.table{
+	border: 10px solid pink;
+}
+
+tr{
+	border:5px solid pink;
+}
+
+
+td{
+	border:3px solid pink;
+}
+
+.end{
+	margin-left:600px;
+	width:200px;
+}
+span{
+	color:green;
+}

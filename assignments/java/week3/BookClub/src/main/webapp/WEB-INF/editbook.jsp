@@ -29,11 +29,32 @@
             <div class="col-12 col-md-8 col-lg-5 col-xl-5">
                <div class="my-md-5 pb-5">   
                
-               <h1 class="fw-bold mb-5">You successfully Login to this Website</h1>
+               <h1 class="fw-bold mb-5">Change your Entry</h1>
 
 		
 		
-		<a href="/logout">logout</a>
+		<form:form action="/book/${theBook.id}/update" method="post" modelAttribute="bookEditForm" >
+		 <input type="hidden" name="_method" value="put"/>
+		<input type="hidden" name="user" value="${user_id}" > 
+			<section class="form-outline mb-4">
+				<label for="title">Title </label>
+				<input type="text" name="title" id="" value="${theBook.title}" class="form-control form-control-lg"/>
+				<form:errors path="title" class="text-warning"/>
+			</section >
+			<section class="form-outline mb-4">
+				<form:label path="author">Author</form:label>
+				<form:input path="author" type="text" value="${theBook.author}" class="form-control form-control-lg"/>
+				<form:errors path="author" class="text-warning" />
+			</section>
+			<section class="form-outline mb-4">
+				<form:label path="thoughts">My Thoughts</form:label>
+				<form:input path="thoughts" type="text" value="${theBook.thoughts}" class="form-control form-control-lg"/>
+				<form:errors path="thoughts" class="text-warning" />
+			</section >
+			
+			<button class="btn btn-primary mt-3">Update</button>
+		</form:form><br><br>
+		
 		
 		  </div>
        </div>

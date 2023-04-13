@@ -16,7 +16,7 @@
 <!-- For any Bootstrap that uses JS -->
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Read Share</title>
 </head>
 <body>
 
@@ -29,12 +29,37 @@
             <div class="col-12 col-md-8 col-lg-5 col-xl-5">
                <div class="my-md-5 pb-5">   
                
-               <h1 class="fw-bold mb-5">You successfully Login to this Website</h1>
-
+            
+         <div class="fw-bold mb-5">
+            <h1>${ theBook.title }</h1>
+           
+        </div>
 		
+		<nav class="end">
+            <a href="/dashboard">back to the shelves</a>
+        </nav>
+        
+        
+            <main>
+	            <c:if test="${ user_id == theBook.user.id }">
+	    	    <h4><span>${ theBook.user.username } </span> read <span>${ theBook.title }</span> by <span>${ theBook.author }</span>.</h4>
+	             </c:if>
+	    
+	             <h4>Here are <span>${ theBook.user.username }</span>'s thoughts:</h4>
+	    
+	             <p>${ theBook.thoughts }</p>
+	    
+	             
+		         <button class="btn btn-outline-primary"><a href="/book/${ theBook.id }/editbook">edit</a></button>
+		         <button class="btn btn-outline-primary"><a href="/book/${ theBook.id }/delete">delete</a></button>
+	            
+	     
+             </main>
+        		
+        		
+        	
 		
-		<a href="/logout">logout</a>
-		
+		         
 		  </div>
        </div>
      </div>

@@ -16,7 +16,7 @@
 <!-- For any Bootstrap that uses JS -->
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Read Share</title>
 </head>
 <body>
 
@@ -29,12 +29,38 @@
             <div class="col-12 col-md-8 col-lg-5 col-xl-5">
                <div class="my-md-5 pb-5">   
                
-               <h1 class="fw-bold mb-5">You successfully Login to this Website</h1>
-
+               <!-- <h1 class="fw-bold mb-5">Welcome,${ user.username } </h1> -->
+         <div class="fw-bold mb-5">
+            <h1>Welcome, ${theUser.username}</h1>
+            <p>Books from everyone's shelves:</p>
+        </div>
 		
+		<nav class="d-flex flex-column justify-content-around align-items-end">
+            <a href="/logout">Logout</a>
+            <a href="/addbook">+ Add to my shelf!</a>
+        </nav>
+        
+        
+        		<table class="table">
+			<tr>
+				<th>ID</th>
+				<th>Title</th>
+				<th>Author Name</th>
+				<th>Posted By</th>
+			</tr>
+			<c:forEach items="${allBooks}" var="b">
+		        <tr>
+		            <td>${b.id}</td>
+		            <td> <a href="/book/${ b.id }/viewbook">${ b.title }</a></td>
+		            <td>${ b.author }</td>
+					<td>${ b.user.username }</td>
+		        </tr>
+		        
+		       
+		    </c:forEach>
+		</table>
 		
-		<a href="/logout">logout</a>
-		
+		         <!--  <td><p><a href="/edit/${b.id}">edit</a> | <a href="/delete/${b.id}">delete</a></p></td> this one work but i prefer the one with he button-->
 		  </div>
        </div>
      </div>
