@@ -23,7 +23,7 @@ public class BankAccount {
     }
 
     public static void getAccountsCreated() {
-        System.out.println("Number of accounts created: " + accountCreated);
+        System.out.println("Total Number of accounts created: " + accountCreated);
     }
 
     public static void printTotalAmount() {
@@ -37,12 +37,12 @@ public class BankAccount {
         // savings");
         // }
         if (account.equals("checking")) {
-            this.checkingBalance += amount;
+            this.checkingBalance = checkingBalance + amount;
             BankAccount.totalAmount += amount;
             return this.checkingBalance;
         } else if (account.equals("savings")) {
-            this.savingsBalance += amount;
-            BankAccount.totalAmount += amount;
+            this.savingsBalance =savingsBalance+ amount;
+            BankAccount.totalAmount = totalAmount+amount;
             return this.savingsBalance;
         } else {
             return 404;
@@ -60,8 +60,8 @@ public class BankAccount {
                 System.out.println("Insufficient funds.");
                 return this.checkingBalance;
             } else {
-                this.checkingBalance -= amount;
-                BankAccount.totalAmount -= amount;
+                this.checkingBalance = totalAmount + amount;
+                BankAccount.totalAmount = totalAmount-amount;
                 return this.checkingBalance;
             }
         } else if (account.equals("savings")) {
@@ -69,8 +69,8 @@ public class BankAccount {
                 System.out.println("Insufficient funds.");
                 return this.savingsBalance;
             } else {
-                this.savingsBalance -= amount;
-                BankAccount.totalAmount -= amount;
+                this.savingsBalance = savingsBalance- amount;
+                BankAccount.totalAmount = savingsBalance - amount;
                 return this.savingsBalance;
             }
         } else {
