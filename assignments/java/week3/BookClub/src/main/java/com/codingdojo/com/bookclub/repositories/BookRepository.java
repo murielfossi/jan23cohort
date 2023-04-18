@@ -10,7 +10,7 @@ import com.codingdojo.com.bookclub.models.BookModel;
 @Repository
 public interface BookRepository extends CrudRepository<BookModel, Long>{
 
-	List<BookModel> findAll();
+	
 	
 	
 }

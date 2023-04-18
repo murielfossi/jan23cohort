@@ -34,8 +34,8 @@
 		
 		
 		<form:form action="/book/${theBook.id}/update" method="post" modelAttribute="bookEditForm" >
-		 <input type="hidden" name="_method" value="put"/>
-		<input type="hidden" name="user" value="${user_id}" > 
+		 <input type="hidden" name="_method" value="put "/>i want my book infos to be update in the database (the PUT)
+		<input type="hidden" name="user" value="${user_id}" > give me back the user infos stored in session
 			<section class="form-outline mb-4">
 				<label for="title">Title </label>
 				<input type="text" name="title" id="" value="${theBook.title}" class="form-control form-control-lg"/>

@@ -32,3 +32,5 @@ At this point, you've built controllers using both the @Controller and @RestCont
 If you said the @RestController annotation means responding with raw data, strings or JSON, you're right! So, to build a full-stack application, we need to render .jsp files and ultimately send html and not just raw data to the client, which means we'll be using the @Controller annotation going forward for all our controllers, and you won't be using @RestController or Postman from here on out. Requests will now come from user interaction!
 
 Before you continue, make sure that you have installed the following dependencies: tomcat-embed-jasper and jstl. If you don't remember how to, feel free to reference the Spring Boot Templating lesson in the last chapter.
+UPDd7TGh
+2. Spring JPA automatically creates a table that contains the foreign key relationships
